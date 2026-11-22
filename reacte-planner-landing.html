@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>REACTE Planner 2027</title>
+<style>
+  :root {
+    --teal: #2BA89A;
+    --teal-dark: #1F7D73;
+    --orange: #F2941E;
+    --yellow: #F7C948;
+    --yellow-light: #FBDE87;
+    --cream: #FBF4EC;
+    --rose: #F7E9E6;
+    --ink: #1D3B38;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    line-height: 1.5;
+  }
+
+  .hero {
+    background: var(--teal);
+    position: relative;
+    overflow: hidden;
+    padding: 72px 24px 96px;
+    text-align: center;
+  }
+
+  .hero::after {
+    content: "";
+    position: absolute;
+    top: -90px;
+    right: -90px;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: var(--orange);
+  }
+
+  .eyebrow-dots {
+    display: flex;
+    justify-content: center;
+    gap: 180px;
+    margin-bottom: 4px;
+  }
+  .eyebrow-dots span {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--orange);
+    display: inline-block;
+  }
+
+  .hero h1 {
+    font-size: clamp(48px, 9vw, 96px);
+    color: var(--cream);
+    letter-spacing: 2px;
+    font-weight: 800;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero p.tagline {
+    color: var(--cream);
+    font-size: clamp(18px, 3vw, 24px);
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-top: 8px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero p.sub {
+    max-width: 480px;
+    margin: 28px auto 0;
+    color: var(--rose);
+    font-size: 16px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .stripe-band {
+    height: 56px;
+    background: repeating-linear-gradient(
+      to bottom,
+      var(--yellow) 0px, var(--yellow) 26px,
+      var(--yellow-light) 26px, var(--yellow-light) 40px
+    );
+  }
+
+  main {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 56px 24px;
+  }
+
+  .price-card {
+    background: var(--rose);
+    border-radius: 20px;
+    padding: 36px 32px;
+    text-align: center;
+    margin-bottom: 56px;
+  }
+
+  .price-card .price {
+    font-size: 56px;
+    font-weight: 800;
+    color: var(--teal-dark);
+  }
+
+  .price-card .price span {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--ink);
+  }
+
+  .price-card .limited {
+    margin-top: 6px;
+    font-size: 15px;
+    color: var(--orange);
+    font-weight: 600;
+  }
+
+  .cta-button {
+    display: inline-block;
+    margin-top: 24px;
+    background: var(--orange);
+    color: var(--cream);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 18px;
+    padding: 16px 40px;
+    border-radius: 999px;
+    transition: transform 0.15s ease, background 0.15s ease;
+  }
+
+  .cta-button:hover {
+    background: #d97e0e;
+    transform: translateY(-2px);
+  }
+
+  h2 {
+    font-size: 28px;
+    color: var(--teal-dark);
+    margin-bottom: 28px;
+    text-align: center;
+  }
+
+  .features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 56px;
+  }
+
+  .feature {
+    background: #fff;
+    border: 2px solid var(--yellow-light);
+    border-radius: 16px;
+    padding: 24px 18px;
+    text-align: center;
+  }
+
+  .feature .dot {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--teal);
+    margin: 0 auto 14px;
+  }
+
+  .feature h3 {
+    font-size: 17px;
+    margin-bottom: 8px;
+    color: var(--ink);
+  }
+
+  .feature p {
+    font-size: 14px;
+    color: #5a6b69;
+  }
+
+  .closing {
+    text-align: center;
+    padding-bottom: 60px;
+  }
+
+  .closing p {
+    max-width: 520px;
+    margin: 0 auto 24px;
+    color: #4a5856;
+  }
+
+  @media (max-width: 640px) {
+    .features { grid-template-columns: 1fr; }
+    .eyebrow-dots { gap: 100px; }
+  }
+</style>
+</head>
+<body>
+
+  <section class="hero">
+    <div class="eyebrow-dots"><span></span><span></span></div>
+    <h1>REACTE</h1>
+    <p class="tagline">PLANNER 2027</p>
+    <p class="sub">Your daily companion to stay organized, all year long — planning, nutrition, and water tracking, built for therapists.</p>
+  </section>
+
+  <div class="stripe-band"></div>
+
+  <main>
+    <div class="price-card">
+      <div class="price">$30 <span>/ planner</span></div>
+      <div class="limited">Limited copies available</div>
+      <a class="cta-button" href="https://wa.me/96171788445?text=Hi!%20I'd%20like%20to%20order%20the%20REACTE%20Planner%202027." target="_blank" rel="noopener">
+        Order on WhatsApp
+      </a>
+    </div>
+
+    <h2>What's inside</h2>
+    <div class="features">
+      <div class="feature">
+        <div class="dot"></div>
+        <h3>Daily Planning</h3>
+        <p>Monthly goals and weekly logs to keep your year on track.</p>
+      </div>
+      <div class="feature">
+        <div class="dot"></div>
+        <h3>Nutrition &amp; Water</h3>
+        <p>Simple daily trackers to build healthy routines.</p>
+      </div>
+      <div class="feature">
+        <div class="dot"></div>
+        <h3>Influencer QR Codes</h3>
+        <p>Scan inside the planner to unlock exclusive extras.</p>
+      </div>
+    </div>
+
+    <div class="closing">
+      <p>2027 starts here. Reserve your REACTE Planner before copies run out.</p>
+      <a class="cta-button" href="https://wa.me/96171788445?text=Hi!%20I'd%20like%20to%20order%20the%20REACTE%20Planner%202027." target="_blank" rel="noopener">
+        Tap to Order
+      </a>
+    </div>
+  </main>
+
+</body>
+</html>
